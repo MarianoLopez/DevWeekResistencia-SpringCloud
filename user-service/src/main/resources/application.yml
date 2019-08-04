@@ -1,0 +1,20 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: user-service
+  data:
+    mongodb:
+      database: USER
+      port: 27017
+  mongodb:
+    embedded:
+      storage:
+        database-dir: ${user.home}/embeddedMongo/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
+  instance:
+    prefer-ip-address: true
