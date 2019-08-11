@@ -1,32 +1,35 @@
 spring:
+  cloud:
+    inetutils:
+      preferred-networks: 192.168.0
   output:
     ansi:
       enabled: always
   application:
-    name: user-service
+    name: reservation-service
   data:
     mongodb:
-      database: USER
+      database: Reservation
       port: 27017
       host: 192.168.223.250
       password: example
       username: root
       authentication-database: admin
-  cloud:
-    inetutils:
-      preferred-networks: 192.168.0
 eureka:
   client:
     service-url:
       defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
     register-with-eureka: true
     fetch-registry: true
-  instance:
-    prefer-ip-address: true
 
 logging:
   level:
     org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
 
 server:
-  port: 8080
+  port: 8085
+reactive:
+  feign:
+    logger:
+      enabled: true
+
