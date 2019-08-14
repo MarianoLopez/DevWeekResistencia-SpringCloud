@@ -26,7 +26,7 @@ eureka:
 
 logging:
   level:
-    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
 
 server:
-  port: 8080
+  port: 8084

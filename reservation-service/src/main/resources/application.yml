@@ -16,20 +16,24 @@ spring:
       username: root
       authentication-database: admin
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
     register-with-eureka: true
-    fetch-registry: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
 
 logging:
   level:
-    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
 
 server:
   port: 8085
-reactive:
-  feign:
-    logger:
-      enabled: true
 
+user-service:
+  ribbon:
+    ServerListRefreshInterval: 2000
