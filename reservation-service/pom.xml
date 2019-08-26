@@ -19,6 +19,7 @@
 		<kotlin.version>1.2.71</kotlin.version>
 		<feign-reactor.version>1.0.22</feign-reactor.version>
 		<spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+		<swagger.version>3.0.0-SNAPSHOT</swagger.version>
 	</properties>
 
 	<dependencies>
@@ -57,7 +58,21 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-data-rest</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
 		<!--<dependency>
 			<groupId>com.playtika.reactivefeign</groupId>
 			<artifactId>feign-reactor-webclient</artifactId>

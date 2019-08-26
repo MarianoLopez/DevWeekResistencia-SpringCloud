@@ -1,4 +1,7 @@
 spring:
+  jackson:
+    serialization:
+      indent-output: true
   cloud:
     inetutils:
       preferred-networks: 192.168.0
