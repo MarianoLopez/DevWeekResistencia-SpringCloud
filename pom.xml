@@ -1,0 +1,14 @@
+<project>
+
+  <groupId>com.z</groupId>
+  <artifactId>parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  
+  <modules>
+    <module>eureka-server</module>
+    <module>gateway</module>
+    <module>user-service</module>
+    <module>reservation-service</module>
+  </modules>
+  
+</project>
