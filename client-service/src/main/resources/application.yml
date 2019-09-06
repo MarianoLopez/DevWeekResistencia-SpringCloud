@@ -1,0 +1,19 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: client-service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
+    register-with-eureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+
+server:
+  port: 8085
