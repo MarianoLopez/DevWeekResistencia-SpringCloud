@@ -15,7 +15,6 @@ fun main(args: Array<String>) {
 	runApplication<HelloServiceApplication>(*args)
 }
 
-
 @RestController
 class UserController(private val helloService: HelloService){
 	@GetMapping("/hi") fun helloWorld() = this.helloService.helloWorld()
